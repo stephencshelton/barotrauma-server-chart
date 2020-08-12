@@ -3,9 +3,9 @@ entries:
   barotrauma:
   - apiVersion: v2
     appVersion: v0.10.4.0
-    created: "2020-08-12T17:59:00.6036533-04:00"
+    created: "2020-08-12T18:01:07.453356-04:00"
     description: A Helm chart installing a Barotrauma dedicated server
-    digest: 0bd45b2ba9188a7e7f78e5bb1b508829d39160923cc73bb912f0811b1b0347dc
+    digest: ca99c4b7757bedc5546181a89b7b9c24977d537f11fee37af96d7042dceef848
     home: https://barotraumagame.com/
     keywords:
     - game
@@ -20,4 +20,4 @@ entries:
     urls:
     - https://stephencshelton.github.io/barotrauma-server-chart/barotrauma-0.1.0.tgz
     version: 0.1.0
-generated: "2020-08-12T17:59:00.6030386-04:00"
+generated: "2020-08-12T18:01:07.4497289-04:00"

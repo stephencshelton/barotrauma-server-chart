@@ -8,12 +8,12 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: 27015
-      targetPort: barotrauma
+      targetPort: barotrauma-27105
       protocol: UDP
-      name: barotrauma
+      name: barotrauma-27015
     - port: 27016
-      targetPort: barotrauma
+      targetPort: barotrauma-27016
       protocol: UDP
-      name: barotrauma
+      name: barotrauma-27016
   selector:
     {{- include "barotrauma.selectorLabels" . | nindent 4 }}
