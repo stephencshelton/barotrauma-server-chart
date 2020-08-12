@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "barotrauma.fullname" . }}
+  labels:
+    {{- include "barotrauma.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: 27015
+      targetPort: barotrauma
+      protocol: UDP
+      name: barotrauma
+    - port: 27016
+      targetPort: barotrauma
+      protocol: UDP
+      name: barotrauma
+  selector:
+    {{- include "barotrauma.selectorLabels" . | nindent 4 }}

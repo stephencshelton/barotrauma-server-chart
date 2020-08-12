@@ -1,0 +1,64 @@
+# Default values for barotrauma.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: goldfish92/barotrauma-dedicated-server
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "latest"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+server:
+  containerEnv:
+  #Name of server in server browser
+  - name: BAR_NAME
+    value: "GAME_NAME"
+  #Password for server
+  - name: BAR_PASSWORD
+    value: "CHANGEME!"
+  #List of users with permissions
+  - name: BAR_PERMISSIONS
+    value: "InGameUsername:Steam64ID:preset,"
+resources:
+  requests:
+    memory: 12G
+    cpu: 4
+
+strategyType: RollingUpdate
+livenessProbe:
+  initialDelaySeconds: 30
+  periodSeconds: 5
+  failureThreshold: 10
+  successThreshold: 1
+  timeoutSeconds: 1
+readinessProbe:
+  initialDelaySeconds: 30
+  periodSeconds: 5
+  failureThreshold: 10
+  successThreshold: 1
+  timeoutSeconds: 1
+
+service:
+  type: ClusterIP
+
+persistence:
+  dataDir:
+    enabled: false
+    Size: 10Gi
+
+podAnnotations: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
