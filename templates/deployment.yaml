@@ -35,10 +35,10 @@ spec:
           value: {{ $value | quote }}
         {{- end }}
         ports:
-        - name: "barotrauma-27015"
+        - name: "bar-27015"
           containerPort: 27015
           protocol: UDP
-        - name: "barotrauma-27016"
+        - name: "bar-27016"
           containerPort: 27016
           protocol: UDP
         volumeMounts:
