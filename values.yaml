@@ -16,15 +16,12 @@ fullnameOverride: ""
 
 server:
   containerEnv:
-  #Name of server in server browser
-  - name: BAR_NAME
-    value: "GAME_NAME"
-  #Password for server
-  - name: BAR_PASSWORD
-    value: "CHANGEME!"
-  #List of users with permissions
-  - name: BAR_PERMISSIONS
-    value: "InGameUsername:Steam64ID:preset,"
+    #Name of server in server browser
+    BAR_NAME: "GAME_NAME"
+    #Password for server
+    BAR_PASSWORD: "CHANGEME!"
+    #List of users with permissions
+    BAR_PERMISSIONS: "InGameUsername:Steam64ID:preset,"
 resources:
   requests:
     memory: 12G
