@@ -1,9 +1,12 @@
 apiVersion: v2
 name: barotrauma
 description: A Helm chart installing a Barotrauma dedicated server
+home: https://barotraumagame.com/
 keywords:
 - game
 - server
+sources:
+- https://github.com/gnoeley/barotrauma-dedicated-server-docker
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
