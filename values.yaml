@@ -31,18 +31,6 @@ resources:
     cpu: 4
 
 strategyType: RollingUpdate
-livenessProbe:
-  initialDelaySeconds: 30
-  periodSeconds: 5
-  failureThreshold: 10
-  successThreshold: 1
-  timeoutSeconds: 1
-readinessProbe:
-  initialDelaySeconds: 30
-  periodSeconds: 5
-  failureThreshold: 10
-  successThreshold: 1
-  timeoutSeconds: 1
 
 service:
   type: ClusterIP
